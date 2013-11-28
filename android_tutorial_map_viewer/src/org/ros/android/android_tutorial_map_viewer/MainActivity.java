@@ -90,6 +90,9 @@ public class MainActivity extends RosActivity {
         disableFollowMe();
       }
 
+      @Override
+      public void onDoubleTap(double tapX, double tapY) {
+      }
     });
     NodeConfiguration nodeConfiguration =
         NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback().getHostAddress(),

@@ -25,4 +25,6 @@ public interface CameraControlListener {
   void onRotate(double focusX, double focusY, double deltaAngle);
 
   void onZoom(double focusX, double focusY, double factor);
+
+  void onDoubleTap(double tapX, double tapY);
 }
