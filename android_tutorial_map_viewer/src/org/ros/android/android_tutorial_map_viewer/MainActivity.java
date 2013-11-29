@@ -36,6 +36,7 @@ import org.ros.android.view.visualization.layer.OccupancyGridLayer;
 import org.ros.android.view.visualization.layer.RobotLayer;
 import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeMainExecutor;
+import org.ros.rosjava_geometry.Vector3;
 import org.ros.time.NtpTimeProvider;
 
 import java.util.concurrent.TimeUnit;
@@ -91,7 +92,7 @@ public class MainActivity extends RosActivity {
       }
 
       @Override
-      public void onDoubleTap(double tapX, double tapY) {
+      public void onDoubleTap(Vector3 tap) {
       }
     });
     NodeConfiguration nodeConfiguration =

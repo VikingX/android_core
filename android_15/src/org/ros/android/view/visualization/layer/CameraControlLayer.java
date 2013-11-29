@@ -101,7 +101,7 @@ public class CameraControlLayer extends DefaultLayer {
                 listeners.signal(new SignalRunnable<CameraControlListener>() {
                   @Override
                   public void run(CameraControlListener listener) {
-                    listener.onDoubleTap(tapVector.getX(), tapVector.getY());
+                    listener.onDoubleTap(tapVector);
                   }
                 });
                 return true;
