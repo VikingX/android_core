@@ -37,7 +37,7 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public class PathLayer extends SubscriberLayer<nav_msgs.Path> implements TfLayer {
 
-  private static final Color COLOR = Color.fromHexAndAlpha("03dfc9", 0.3f);
+  private static final Color COLOR = Color.fromHexAndAlpha("ff5500", 0.3f);
   private static final float POINT_SIZE = 5.0f;
 
   private FloatBuffer vertexBuffer;
@@ -91,7 +91,7 @@ public class PathLayer extends SubscriberLayer<nav_msgs.Path> implements TfLayer
       for (PoseStamped pose : path.getPoses()) {
         // TODO(damonkohler): Choose the separation between points as a pixel
         // value. This will require inspecting the zoom level from the camera.
-        if (i % 15 == 0) {
+        if (i % 2 == 0) {
           vertexBuffer.put((float) pose.getPose().getPosition().getX());
           vertexBuffer.put((float) pose.getPose().getPosition().getY());
           vertexBuffer.put((float) pose.getPose().getPosition().getZ());
